@@ -3,8 +3,15 @@ interface FormInputProps {
   placeholder: string;
   required: boolean;
   errors: string[];
+  name: string;
 }
-const FormInput = ({ type, placeholder, required, errors }: FormInputProps) => {
+const FormInput = ({
+  type,
+  placeholder,
+  required,
+  errors,
+  name,
+}: FormInputProps) => {
   return (
     <div className="flex flex-col gap-2">
       <input
@@ -12,6 +19,7 @@ const FormInput = ({ type, placeholder, required, errors }: FormInputProps) => {
         type={type}
         placeholder={placeholder}
         required={required}
+        name={name}
       />
       {errors.map((error, index) => (
         <span key={index} className="text-red-500 font-medium">
