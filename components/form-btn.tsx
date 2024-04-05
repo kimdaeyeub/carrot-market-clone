@@ -1,14 +1,18 @@
+"use client";
+import { useFormStatus } from "react-dom";
+
 interface FormBtnProps {
-  loading: boolean;
   text: string;
 }
-const FormBtn = ({ loading, text }: FormBtnProps) => {
+const FormBtn = ({ text }: FormBtnProps) => {
+  // 이 훅은 form의 자식요소에서만 사용가능
+  const { pending } = useFormStatus();
   return (
     <button
-      disabled={loading}
+      disabled={pending}
       className="primary-btn h-10 disabled:bg-neutral-400 disabled:text-neutral-300 disabled:cursor-not-allowed"
     >
-      {loading ? "로딩중..." : text}
+      {pending ? "로딩중..." : text}
     </button>
   );
 };
