@@ -1,10 +1,10 @@
 "use client";
 import { useFormStatus } from "react-dom";
 
-interface FormBtnProps {
+interface ButtonProps {
   text: string;
 }
-const FormBtn = ({ text }: FormBtnProps) => {
+const Button = ({ text }: ButtonProps) => {
   // 이 훅은 form의 자식요소에서만 사용가능
   const { pending } = useFormStatus();
   return (
@@ -17,4 +17,4 @@ const FormBtn = ({ text }: FormBtnProps) => {
   );
 };
 
-export default FormBtn;
+export default Button;
