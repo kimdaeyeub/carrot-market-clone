@@ -5,6 +5,7 @@ import {
   PASSWORD_REGEX_ERROR,
 } from "@/lib/constants";
 import db from "@/lib/db";
+import bcrypt from "bcrypt";
 import { z } from "zod";
 
 const checkUsername = (username: string) => !username.includes("potato");
@@ -58,9 +59,11 @@ const formSchema = z
       .email()
       .toLowerCase()
       .refine(checkUniqueEmail, "해당 이메일이 이미 존재합니다."),
-    password: z.string().min(PASSWORD_MIN_LENGTH),
+    password: z.string(),
+    // .min(PASSWORD_MIN_LENGTH)
     // .regex(PASSWORD_REGEX, PASSWORD_REGEX_ERROR),
-    confirm_password: z.string().min(10),
+    confirm_password: z.string(),
+    // .min(10),
   })
   .refine(checkPassword, {
     path: ["confirm_password"],
@@ -78,10 +81,20 @@ export const createAccount = async (prevState: any, formData: FormData) => {
   if (!result.success) {
     return result.error.flatten();
   } else {
-    // 해당 유저네임을 소유한 사용자가 이미 존재하는지 확인
-    // 해당 이메일을 소유한 사용자가 이미 존재하는지 확인
     // 비밀번호 해싱
+    const hashedPassword = await bcrypt.hash(result.data.password, 12);
     // 사용자를 db에 저장
+    const user = await db.user.create({
+      data: {
+        username: result.data.username,
+        email: result.data.email,
+        password: hashedPassword,
+      },
+      select: {
+        id: true,
+      },
+    });
+    console.log(user);
     // 사용자를 로그인
     // redirect "/home"
   }
