@@ -5,6 +5,7 @@ import {
   PASSWORD_REGEX_ERROR,
 } from "@/lib/constants";
 import db from "@/lib/db";
+import getSession from "@/lib/session";
 import bcrypt from "bcrypt";
 import { getIronSession } from "iron-session";
 import { cookies } from "next/headers";
@@ -99,13 +100,9 @@ export const createAccount = async (prevState: any, formData: FormData) => {
     });
     console.log(user);
     // 사용자를 로그인
-    const cookie = await getIronSession(cookies(), {
-      cookieName: "delicious-carrot",
-      password: process.env.COOKIE_PASSWORD!,
-    });
-    // @ts-ignore
-    cookie.id = user.id;
-    await cookie.save();
+    const session = await getSession();
+    session.id = user.id;
+    await session.save();
     // redirect "/home"
     redirect("/profile");
   }
