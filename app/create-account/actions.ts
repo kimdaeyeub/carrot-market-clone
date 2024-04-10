@@ -22,30 +22,6 @@ const checkPassword = ({
   confirm_password: string;
 }) => password === confirm_password;
 
-const checkUniqueEmail = async (email: string) => {
-  const user = await db.user.findUnique({
-    where: {
-      email,
-    },
-    select: {
-      id: true,
-    },
-  });
-  return !Boolean(user);
-};
-
-const checkUniqueUsername = async (username: string) => {
-  const user = await db.user.findUnique({
-    where: {
-      username,
-    },
-    select: {
-      id: true,
-    },
-  });
-  return !Boolean(user);
-};
-
 const formSchema = z
   .object({
     username: z
@@ -56,13 +32,8 @@ const formSchema = z
       .toLowerCase()
       .trim()
       // .transform((username) => `🔥 ${username} 🔥`)
-      .refine(checkUsername, "Potatoes not allowed")
-      .refine(checkUniqueUsername, "해당 유저네임은 이미 존재합니다."),
-    email: z
-      .string()
-      .email()
-      .toLowerCase()
-      .refine(checkUniqueEmail, "해당 이메일이 이미 존재합니다."),
+      .refine(checkUsername, "Potatoes not allowed"),
+    email: z.string().email().toLowerCase(),
     password: z.string(),
     // .min(PASSWORD_MIN_LENGTH)
     // .regex(PASSWORD_REGEX, PASSWORD_REGEX_ERROR),
@@ -72,6 +43,44 @@ const formSchema = z
   .refine(checkPassword, {
     path: ["confirm_password"],
     message: "비밀번호가 일치하지 않습니다.",
+  })
+  .superRefine(async ({ username }, ctx) => {
+    const user = await db.user.findUnique({
+      where: {
+        username,
+      },
+      select: {
+        id: true,
+      },
+    });
+    if (user) {
+      ctx.addIssue({
+        code: "custom",
+        message: "이미 사용중인 사용자명입니다.",
+        path: ["username"],
+        fatal: true,
+      });
+      return z.NEVER;
+    }
+  })
+  .superRefine(async ({ email }, ctx) => {
+    const user = await db.user.findUnique({
+      where: {
+        email,
+      },
+      select: {
+        id: true,
+      },
+    });
+    if (user) {
+      ctx.addIssue({
+        code: "custom",
+        message: "이미 사용중인 이메일입니다.",
+        path: ["email"],
+        fatal: true,
+      });
+      return z.NEVER;
+    }
   });
 
 export const createAccount = async (prevState: any, formData: FormData) => {
