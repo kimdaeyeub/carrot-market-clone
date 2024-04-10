@@ -6,6 +6,9 @@ import {
 } from "@/lib/constants";
 import db from "@/lib/db";
 import bcrypt from "bcrypt";
+import { getIronSession } from "iron-session";
+import { cookies } from "next/headers";
+import { redirect } from "next/navigation";
 import { z } from "zod";
 
 const checkUsername = (username: string) => !username.includes("potato");
@@ -96,6 +99,14 @@ export const createAccount = async (prevState: any, formData: FormData) => {
     });
     console.log(user);
     // 사용자를 로그인
+    const cookie = await getIronSession(cookies(), {
+      cookieName: "delicious-carrot",
+      password: process.env.COOKIE_PASSWORD!,
+    });
+    // @ts-ignore
+    cookie.id = user.id;
+    await cookie.save();
     // redirect "/home"
+    redirect("/profile");
   }
 };

@@ -5,6 +5,7 @@ interface ButtonProps {
   text: string;
 }
 const Button = ({ text }: ButtonProps) => {
+  // TODO
   // 이 훅은 form의 자식요소에서만 사용가능
   const { pending } = useFormStatus();
   return (
