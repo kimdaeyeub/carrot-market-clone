@@ -6,7 +6,9 @@ import { NextRequest } from "next/server";
 export async function GET(request: NextRequest) {
   const code = request.nextUrl.searchParams.get("code");
   if (!code) {
-    return notFound();
+    return new Response(null, {
+      status: 400,
+    });
   }
   let accessTokenURL = "https://github.com/login/oauth/access_token";
   const accessTokenParams = new URLSearchParams({
