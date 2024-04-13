@@ -11,7 +11,7 @@ export async function getMoreProducts(page: number) {
       id: true,
     },
     take: 1,
-    skip: 1,
+    skip: page * 1,
     orderBy: {
       created_at: "desc",
     },
