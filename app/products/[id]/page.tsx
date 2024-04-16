@@ -31,6 +31,12 @@ async function getIsOwner(userId: number) {
   return false;
 }
 
+export async function generateMetadata({ params }: { params: { id: string } }) {
+  const product = await getProduct(Number(params.id));
+  return {
+    title: product?.title,
+  };
+}
 const ProductDetail = async ({ params }: { params: { id: string } }) => {
   const id = Number(params.id);
   if (isNaN(id)) {
