@@ -2,8 +2,9 @@ import db from "@/lib/db";
 import getSession from "@/lib/session";
 import { notFound, redirect } from "next/navigation";
 import React from "react";
+import { Suspense } from "react";
 
-const getUser = async () => {
+async function getUser() {
   const session = await getSession();
   if (session.id) {
     const user = await db.user.findUnique({
@@ -16,9 +17,15 @@ const getUser = async () => {
     }
   }
   notFound();
-};
-const Profile = async () => {
+}
+
+async function Username() {
+  await new Promise((resolve) => setTimeout(resolve, 10000));
   const user = await getUser();
+  return <h1>Welcome! {user?.username}!</h1>;
+}
+
+export default async function Profile() {
   const logOut = async () => {
     "use server";
     const session = await getSession();
@@ -27,12 +34,12 @@ const Profile = async () => {
   };
   return (
     <div>
-      <h1>Welcome! {user?.username}</h1>
+      <Suspense fallback={"Welcome!"}>
+        <Username />
+      </Suspense>
       <form action={logOut}>
-        <button>Logout</button>
+        <button>Log out</button>
       </form>
     </div>
   );
-};
-
-export default Profile;
+}
