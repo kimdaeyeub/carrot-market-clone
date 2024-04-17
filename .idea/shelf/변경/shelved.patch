@@ -1,0 +1,19 @@
+Index: app/(auth)/sms/actions.ts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\"use server\";\n\nimport { z } from \"zod\";\nimport validator from \"validator\";\nimport { redirect } from \"next/navigation\";\n\nconst phoneSchema = z\n  .string()\n  .trim()\n  .refine(\n    (phone) => validator.isMobilePhone(phone, \"ko-KR\"),\n    \"잘못된 번호 형식입니다.\"\n  );\n\nconst tokenSchema = z.coerce.number().min(100000).max(999999);\n\ninterface ActionState {\n  token: boolean;\n}\n\nexport const smsLogin = (prevState: ActionState, formData: FormData) => {\n  const phone = formData.get(\"phone\");\n  const token = formData.get(\"token\");\n  if (!prevState.token) {\n    const result = phoneSchema.safeParse(phone);\n    if (!result.success) {\n      return {\n        token: false,\n        error: result.error.flatten(),\n      };\n    } else {\n      return {\n        token: true,\n      };\n    }\n  } else {\n    const result = tokenSchema.safeParse(token);\n    if (!result.success) {\n      return {\n        token: true,\n        error: result.error.flatten(),\n        // return the errors\n      };\n    } else {\n      redirect(\"/\");\n    }\n  }\n};\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/(auth)/sms/actions.ts b/app/(auth)/sms/actions.ts
+--- a/app/(auth)/sms/actions.ts	(revision 112431323ab4a614166c671a710142227b553eda)
++++ b/app/(auth)/sms/actions.ts	(date 1713364858403)
+@@ -9,7 +9,7 @@
+   .trim()
+   .refine(
+     (phone) => validator.isMobilePhone(phone, "ko-KR"),
+-    "잘못된 번호 형식입니다."
++    "잘못된 번호 형식입니다.",
+   );
+ 
+ const tokenSchema = z.coerce.number().min(100000).max(999999);
