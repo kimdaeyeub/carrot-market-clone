@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="576d4a5c-c4bb-4f1e-9d96-a3a063242164" name="변경" comment="" />
+    <list default="true" id="576d4a5c-c4bb-4f1e-9d96-a3a063242164" name="변경" comment="업데이트">
+      <change afterPath="$PROJECT_DIR$/prisma/migrations/20240417182447_reset/migration.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/home/@modal/(..)products/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/home/@modal/(..)products/[id]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/life/loading.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/life/loading.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/life/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/life/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/migrations/20240408111112_add_user/migration.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/migrations/20240408160457_smstoken/migration.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/migrations/20240408163504_smstoken_on_delete/migration.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/migrations/20240411155825_add_product/migration.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bossam.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/bossam.webp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,7 +70,7 @@
     "npm.dev.executor": "Run",
     "prettierjs.PrettierConfiguration.Package": "/Users/kimdaeyeub/Desktop/carrot-market/node_modules/prettier",
     "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external",
+    "ts.external.directory.path": "/Users/kimdaeyeub/Desktop/carrot-market/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -99,6 +110,23 @@
       <workItem from="1713369231316" duration="442000" />
       <workItem from="1713369685905" duration="1526000" />
     </task>
+    <task id="LOCAL-00001" summary="add model">
+      <option name="closed" value="true" />
+      <created>1713378051738</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1713378051738</updated>
+    </task>
+    <task id="LOCAL-00002" summary="업데이트">
+      <option name="closed" value="true" />
+      <created>1713378132669</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1713378132669</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,5 +145,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="add model" />
+    <MESSAGE value="업데이트" />
+    <option name="LAST_COMMIT_MESSAGE" value="업데이트" />
   </component>
 </project>

@@ -6,6 +6,7 @@ const Modal = async ({ params }: { params: { id: string } }) => {
   const router = useRouter();
   // TODO: close 버튼을 별도의 클라이언트 컴포넌트로 분리하기
   // TODO: 모달에 실제 데이터를 띄우기
+  // FIX: /products/add에서도 모달이 열리는 문제 발생
   const onCloseClick = () => {
     router.back();
   };
