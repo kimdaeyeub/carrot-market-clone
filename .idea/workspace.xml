@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="576d4a5c-c4bb-4f1e-9d96-a3a063242164" name="변경" comment="cache tags">
-      <change afterPath="$PROJECT_DIR$/app/posts/[id]/actions.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/like-button.tsx" afterDir="false" />
+    <list default="true" id="576d4a5c-c4bb-4f1e-9d96-a3a063242164" name="변경" comment="useOptimistic">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/posts/[id]/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/posts/[id]/actions.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/posts/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/posts/[id]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +71,7 @@
     "nodejs_package_manager_path": "npm",
     "npm.dev.executor": "Run",
     "prettierjs.PrettierConfiguration.Package": "/Users/kimdaeyeub/Desktop/carrot-market/node_modules/prettier",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
     "ts.external.directory.path": "/Users/kimdaeyeub/Desktop/carrot-market/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
@@ -115,7 +115,8 @@
       <workItem from="1713419624271" duration="300000" />
       <workItem from="1713419991540" duration="625000" />
       <workItem from="1713423219919" duration="7905000" />
-      <workItem from="1713442733218" duration="2666000" />
+      <workItem from="1713442733218" duration="4533000" />
+      <workItem from="1713461984008" duration="2719000" />
     </task>
     <task id="LOCAL-00001" summary="add model">
       <option name="closed" value="true" />
@@ -149,7 +150,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713436091924</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="useOptimistic">
+      <option name="closed" value="true" />
+      <created>1713457876569</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1713457876569</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,6 +181,7 @@
     <MESSAGE value="업데이트" />
     <MESSAGE value="post 컴포넌트 추가" />
     <MESSAGE value="cache tags" />
-    <option name="LAST_COMMIT_MESSAGE" value="cache tags" />
+    <MESSAGE value="useOptimistic" />
+    <option name="LAST_COMMIT_MESSAGE" value="useOptimistic" />
   </component>
 </project>

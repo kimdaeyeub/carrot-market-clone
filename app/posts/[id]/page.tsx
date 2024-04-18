@@ -80,6 +80,7 @@ export default async function PostDetail({
   if (isNaN(id)) {
     return notFound();
   }
+
   const post = await getCachedPost(id);
   if (!post) {
     return notFound();

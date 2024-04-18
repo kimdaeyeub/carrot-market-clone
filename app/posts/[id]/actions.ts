@@ -17,6 +17,7 @@ export const likePost = async (postId: number) => {
     revalidateTag(`like-status-${postId}`);
   } catch (e) {}
 };
+
 export const dislikePost = async (postId: number) => {
   try {
     const session = await getSession();
