@@ -4,17 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="576d4a5c-c4bb-4f1e-9d96-a3a063242164" name="변경" comment="업데이트">
-      <change afterPath="$PROJECT_DIR$/prisma/migrations/20240417182447_reset/migration.sql" afterDir="false" />
+    <list default="true" id="576d4a5c-c4bb-4f1e-9d96-a3a063242164" name="변경" comment="cache tags">
+      <change afterPath="$PROJECT_DIR$/app/posts/[id]/actions.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/like-button.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(tabs)/home/@modal/(..)products/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/home/@modal/(..)products/[id]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(tabs)/life/loading.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/life/loading.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(tabs)/life/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/life/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/migrations/20240408111112_add_user/migration.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/migrations/20240408160457_smstoken/migration.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/migrations/20240408163504_smstoken_on_delete/migration.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/migrations/20240411155825_add_product/migration.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bossam.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/bossam.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/posts/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/posts/[id]/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +16,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ChangesViewManager" show_ignored="true" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -69,7 +71,7 @@
     "nodejs_package_manager_path": "npm",
     "npm.dev.executor": "Run",
     "prettierjs.PrettierConfiguration.Package": "/Users/kimdaeyeub/Desktop/carrot-market/node_modules/prettier",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "ts.external.directory.path": "/Users/kimdaeyeub/Desktop/carrot-market/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
@@ -109,6 +111,11 @@
       <workItem from="1713364647206" duration="3818000" />
       <workItem from="1713369231316" duration="442000" />
       <workItem from="1713369685905" duration="1526000" />
+      <workItem from="1713419597718" duration="17000" />
+      <workItem from="1713419624271" duration="300000" />
+      <workItem from="1713419991540" duration="625000" />
+      <workItem from="1713423219919" duration="7905000" />
+      <workItem from="1713442733218" duration="2666000" />
     </task>
     <task id="LOCAL-00001" summary="add model">
       <option name="closed" value="true" />
@@ -126,7 +133,23 @@
       <option name="project" value="LOCAL" />
       <updated>1713378132669</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="post 컴포넌트 추가">
+      <option name="closed" value="true" />
+      <created>1713380645934</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1713380645934</updated>
+    </task>
+    <task id="LOCAL-00004" summary="cache tags">
+      <option name="closed" value="true" />
+      <created>1713436091924</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1713436091924</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,6 +170,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="add model" />
     <MESSAGE value="업데이트" />
-    <option name="LAST_COMMIT_MESSAGE" value="업데이트" />
+    <MESSAGE value="post 컴포넌트 추가" />
+    <MESSAGE value="cache tags" />
+    <option name="LAST_COMMIT_MESSAGE" value="cache tags" />
   </component>
 </project>
