@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="576d4a5c-c4bb-4f1e-9d96-a3a063242164" name="변경" comment="useOptimistic">
+    <list default="true" id="576d4a5c-c4bb-4f1e-9d96-a3a063242164" name="변경" comment="Chat room">
+      <change afterPath="$PROJECT_DIR$/app/chats/[id]/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/posts/[id]/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/posts/[id]/actions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/posts/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/posts/[id]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/chat/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/chats/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/home/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/home/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/products/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/products/[id]/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -116,7 +118,7 @@
       <workItem from="1713419991540" duration="625000" />
       <workItem from="1713423219919" duration="7905000" />
       <workItem from="1713442733218" duration="4533000" />
-      <workItem from="1713461984008" duration="2719000" />
+      <workItem from="1713461984008" duration="4991000" />
     </task>
     <task id="LOCAL-00001" summary="add model">
       <option name="closed" value="true" />
@@ -158,7 +160,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713457876569</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Models">
+      <option name="closed" value="true" />
+      <created>1713465569710</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1713465569710</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -182,6 +192,8 @@
     <MESSAGE value="post 컴포넌트 추가" />
     <MESSAGE value="cache tags" />
     <MESSAGE value="useOptimistic" />
-    <option name="LAST_COMMIT_MESSAGE" value="useOptimistic" />
+    <MESSAGE value="Models" />
+    <MESSAGE value="Chat room" />
+    <option name="LAST_COMMIT_MESSAGE" value="Chat room" />
   </component>
 </project>
