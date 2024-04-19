@@ -1,17 +1,24 @@
 "use client";
 
 import { InitialChatMessages } from "@/app/chats/[id]/page";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { formatToTimeAgo } from "@/lib/utils";
 import Image from "next/image";
 import { ArrowUpCircleIcon } from "@heroicons/react/24/solid";
+import { createClient } from "@supabase/supabase-js";
+
+const SUPABASE_PUBLIC_KEY =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhzZ2t6am93dGF4amhuYmxiYmtiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTM1MTk0MTIsImV4cCI6MjAyOTA5NTQxMn0.ZpxIIjVSOHrEWqFJLW8mJLlZmi0H5OV8BxWn1ocL8Vg";
+const SUPABASE_URL = "https://xsgkzjowtaxjhnblbbkb.supabase.co";
 
 interface ChatMessagesListProps {
   initialMessages: InitialChatMessages;
   userId: number;
+  chatRoomId: string;
 }
 export default function ChatMessagesList({
   initialMessages,
+  chatRoomId,
   userId,
 }: ChatMessagesListProps) {
   const [messages, setMessages] = useState(initialMessages);
@@ -24,9 +31,25 @@ export default function ChatMessagesList({
   };
   const onSubmit = (event: React.FormEvent) => {
     event.preventDefault();
-    alert(message);
+    setMessages((prevMsgs) => [
+      ...prevMsgs,
+      {
+        id: Date.now(),
+        payload: message,
+        created_at: new Date(),
+        userId,
+        user: { username: "string", avatar: "xxx" },
+      },
+    ]);
     setMessage("");
   };
+  useEffect(() => {
+    const client = createClient(SUPABASE_URL, SUPABASE_PUBLIC_KEY);
+    const channel = client.channel(`room-${chatRoomId}`);
+    channel.on("broadcast", { event: "message" }, (payload) => {
+      console.log(payload);
+    });
+  }, []);
   return (
     <div className="p-5 flex flex-col gap-5 min-h-screen justify-end">
       {messages.map((message) => (

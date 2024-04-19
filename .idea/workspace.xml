@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="576d4a5c-c4bb-4f1e-9d96-a3a063242164" name="변경" comment="Chat room">
-      <change afterPath="$PROJECT_DIR$/components/chat-messages-list.tsx" afterDir="false" />
+    <list default="true" id="576d4a5c-c4bb-4f1e-9d96-a3a063242164" name="변경" comment="Messages">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(tabs)/home/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/home/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/chats/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/chats/[id]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/tab-bar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/tab-bar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/chat-messages-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/chat-messages-list.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +58,6 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "js.linters.configure.manually.selectedeslint": "true",
     "last_opened_file_path": "/Users/kimdaeyeub/Desktop/carrot-market",
@@ -73,7 +72,7 @@
     "nodejs_package_manager_path": "npm",
     "npm.dev.executor": "Run",
     "prettierjs.PrettierConfiguration.Package": "/Users/kimdaeyeub/Desktop/carrot-market/node_modules/prettier",
-    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
+    "settings.editor.selected.configurable": "preferences.keymap",
     "ts.external.directory.path": "/Users/kimdaeyeub/Desktop/carrot-market/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
@@ -120,7 +119,11 @@
       <workItem from="1713442733218" duration="4533000" />
       <workItem from="1713461984008" duration="5025000" />
       <workItem from="1713505887927" duration="1022000" />
-      <workItem from="1713508774215" duration="2024000" />
+      <workItem from="1713508774215" duration="2342000" />
+      <workItem from="1713517509985" duration="981000" />
+      <workItem from="1713518501120" duration="20000" />
+      <workItem from="1713518528751" duration="1105000" />
+      <workItem from="1713540195518" duration="277000" />
     </task>
     <task id="LOCAL-00001" summary="add model">
       <option name="closed" value="true" />
@@ -178,11 +181,30 @@
       <option name="project" value="LOCAL" />
       <updated>1713470005389</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Messages">
+      <option name="closed" value="true" />
+      <created>1713511086609</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1713511086609</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="GitHub.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -204,6 +226,7 @@
     <MESSAGE value="useOptimistic" />
     <MESSAGE value="Models" />
     <MESSAGE value="Chat room" />
-    <option name="LAST_COMMIT_MESSAGE" value="Chat room" />
+    <MESSAGE value="Messages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Messages" />
   </component>
 </project>

@@ -24,7 +24,6 @@ async function getRoom(id: string) {
   }
   return room;
 }
-
 async function getMessages(chatRoomId: string) {
   const messages = await db.message.findMany({
     where: {
@@ -56,6 +55,10 @@ export default async function ChatRoom({ params }: { params: { id: string } }) {
   const initialMessages = await getMessages(params.id);
   const session = await getSession();
   return (
-    <ChatMessagesList initialMessages={initialMessages} userId={session.id!} />
+    <ChatMessagesList
+      chatRoomId={params.id}
+      initialMessages={initialMessages}
+      userId={session.id!}
+    />
   );
 }
