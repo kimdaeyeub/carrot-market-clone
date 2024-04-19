@@ -24,6 +24,7 @@ async function getInitialProducts() {
       created_at: "desc",
     },
   });
+  console.log(products);
   return products;
 }
 
@@ -33,6 +34,7 @@ export type InitialProducts = Prisma.PromiseReturnType<
 
 export default async function Products() {
   const initialProducts = await getCachedProducts();
+  console.log(initialProducts);
   return (
     <div>
       <ProductList initialProducts={initialProducts} />

@@ -37,7 +37,7 @@ const TabBar = () => {
         )}
         <span>동네생활</span>
       </Link>
-      <Link href="/chat" className="flex flex-col items-center gap-px">
+      <Link href="/chats" className="flex flex-col items-center gap-px">
         {pathname === "/chat" ? (
           <SolidChatIcon className="w-7 h-7" />
         ) : (

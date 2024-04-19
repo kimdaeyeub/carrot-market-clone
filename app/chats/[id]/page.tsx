@@ -1,6 +1,8 @@
 import db from "@/lib/db";
 import { notFound } from "next/navigation";
 import getSession from "@/lib/session";
+import { Prisma } from "@prisma/client";
+import ChatMessagesList from "@/components/chat-messages-list";
 
 async function getRoom(id: string) {
   const room = await db.chatRoom.findUnique({
@@ -22,10 +24,38 @@ async function getRoom(id: string) {
   }
   return room;
 }
+
+async function getMessages(chatRoomId: string) {
+  const messages = await db.message.findMany({
+    where: {
+      chatRoomId,
+    },
+    select: {
+      id: true,
+      payload: true,
+      created_at: true,
+      userId: true,
+      user: {
+        select: {
+          avatar: true,
+          username: true,
+        },
+      },
+    },
+  });
+  return messages;
+}
+
+export type InitialChatMessages = Prisma.PromiseReturnType<typeof getMessages>;
+
 export default async function ChatRoom({ params }: { params: { id: string } }) {
   const room = await getRoom(params.id);
   if (!room) {
     return notFound();
   }
-  return <div>Chat!!!!</div>;
+  const initialMessages = await getMessages(params.id);
+  const session = await getSession();
+  return (
+    <ChatMessagesList initialMessages={initialMessages} userId={session.id!} />
+  );
 }

@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="576d4a5c-c4bb-4f1e-9d96-a3a063242164" name="변경" comment="Chat room">
-      <change afterPath="$PROJECT_DIR$/app/chats/[id]/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/chat-messages-list.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(tabs)/chat/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/chats/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(tabs)/home/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/home/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/products/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/products/[id]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/chats/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/chats/[id]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/tab-bar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/tab-bar.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,19 +60,20 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
+    "js.linters.configure.manually.selectedeslint": "true",
     "last_opened_file_path": "/Users/kimdaeyeub/Desktop/carrot-market",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.stylelint": "true",
     "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.eslint": "/Users/kimdaeyeub/Desktop/carrot-market/node_modules/eslint",
     "node.js.selected.package.standard": "",
     "node.js.selected.package.stylelint": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "npm.dev.executor": "Run",
     "prettierjs.PrettierConfiguration.Package": "/Users/kimdaeyeub/Desktop/carrot-market/node_modules/prettier",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
     "ts.external.directory.path": "/Users/kimdaeyeub/Desktop/carrot-market/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
@@ -118,7 +118,9 @@
       <workItem from="1713419991540" duration="625000" />
       <workItem from="1713423219919" duration="7905000" />
       <workItem from="1713442733218" duration="4533000" />
-      <workItem from="1713461984008" duration="4991000" />
+      <workItem from="1713461984008" duration="5025000" />
+      <workItem from="1713505887927" duration="1022000" />
+      <workItem from="1713508774215" duration="2024000" />
     </task>
     <task id="LOCAL-00001" summary="add model">
       <option name="closed" value="true" />
@@ -168,7 +170,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713465569710</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Chat room">
+      <option name="closed" value="true" />
+      <created>1713470005389</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1713470005389</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
