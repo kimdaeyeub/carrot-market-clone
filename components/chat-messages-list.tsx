@@ -15,11 +15,15 @@ interface ChatMessagesListProps {
   initialMessages: InitialChatMessages;
   userId: number;
   chatRoomId: string;
+  username: string;
+  avatar: string;
 }
 export default function ChatMessagesList({
   initialMessages,
   chatRoomId,
   userId,
+  username,
+  avatar,
 }: ChatMessagesListProps) {
   const [messages, setMessages] = useState(initialMessages);
   const [message, setMessage] = useState("");
@@ -45,7 +49,13 @@ export default function ChatMessagesList({
     channel.current?.send({
       type: "broadcast",
       event: "message",
-      payload: { message },
+      payload: {
+        id: Date.now(),
+        created_at: new Date(),
+        payload: message,
+        userId,
+        user: { username, avatar },
+      },
     });
     setMessage("");
   };
@@ -54,7 +64,7 @@ export default function ChatMessagesList({
     channel.current = client.channel(`room-${chatRoomId}`);
     channel.current
       .on("broadcast", { event: "message" }, (payload) => {
-        console.log(payload);
+        setMessages((prev) => [...prev, payload.payload]);
       })
       .subscribe();
     return () => {
